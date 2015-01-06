@@ -13,10 +13,10 @@ namespace Weyforth\GitPHP;
 
 class GitTools{
 
-	protected $root = ABSPATH;
+	protected $root;
 
-	public function __construct($path){
-		$this->root = $path;
+	public function __construct($path = false){
+		$this->root = $path ? $path : dirname(__FILE__);
 	}
 
 	public function setRootPath($path){
@@ -38,6 +38,7 @@ class GitTools{
 	}
 
 	public function currentBranch() {
+		print $this->root;
 		$stringfromfile = @file($this->root . '/.git/HEAD' );
 
 		if(!$stringfromfile) return '';
