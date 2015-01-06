@@ -38,7 +38,6 @@ class GitTools{
 	}
 
 	public function currentBranch() {
-		print $this->root;
 		$stringfromfile = @file($this->root . '/.git/HEAD' );
 
 		if(!$stringfromfile) return '';
