@@ -1,0 +1,16 @@
+{
+    "name": "weyforth/php-git",
+    "require": {
+    },
+    "authors": [
+        {
+            "name": "Mike Farrow",
+            "email": "contact@mikefarrow.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Weyforth\\GitPHP": "src/"
+        }
+    }
+}
