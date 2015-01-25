@@ -27,10 +27,10 @@ class GitTools{
 		if(!$branch) $branch = $this->currentBranch();
 
 		if ( $hash = @file($this->root . '/.git/refs/heads/' . $branch)) {
-			return $hash[0];
+			return trim($hash[0]);
 		} else {
 			if ( $hash = @file($this->root . '/REVISION')){
-				return $hash[0];
+				return trim($hash[0]);
 			}else{
 				return false;
 			}
